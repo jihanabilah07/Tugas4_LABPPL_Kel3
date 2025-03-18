@@ -27,3 +27,13 @@ export const getStudentById = (req: Request, res: Response) => {
     if (!student) return res.status(404).json({ message: "Mahasiswa tidak ditemukan" });
     res.json(student);
 };
+
+// Mencari mahasiswa berdasarkan nama
+export const searchStudentByName = (req: Request, res: Response) => {
+    const { name } = req.query;
+    const students: Student[] = readJSON(dbPath);
+    const filtered = students.filter(s => s.name.toLowerCase().includes((name as string).toLowerCase()));
+
+    if (filtered.length === 0) return res.status(404).json({ message: "Mahasiswa tidak ditemukan" });
+    res.json(filtered);
+};
