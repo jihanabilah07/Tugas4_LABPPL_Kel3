@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Jihan Nabilah",
+      "npm": "2208107010035",
+      "major": "Informatika"
+    },
+    {
+      "id": 2,
+      "name": "Shofia Nurul Huda",
+      "npm": "2208107010021",
+      "major": "Sistem Informasi"
+    },
+    {
+        "id": 3,
+        "name": "Nisa Rianti",
+        "npm": "2208107010022",
+        "major": "Teknik Informatika"
+      }
+  ]
+  
