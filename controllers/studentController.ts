@@ -19,3 +19,11 @@ export const getAllStudents = (req: Request, res: Response) => {
 
     res.json({ total: students.length, data: students });
 };
+
+// Mendapatkan mahasiswa berdasarkan ID
+export const getStudentById = (req: Request, res: Response) => {
+    const students: Student[] = readJSON(dbPath);
+    const student = students.find(s => s.id === parseInt(req.params.id));
+    if (!student) return res.status(404).json({ message: "Mahasiswa tidak ditemukan" });
+    res.json(student);
+};
